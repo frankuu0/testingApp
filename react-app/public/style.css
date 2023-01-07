@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+* {
+  font-family: 'Comfortaa', cursive; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: ghostwhite; }
+
+input:not(.radio), button:not(.radio) {
+  background-color: #fff;
+  margin: 5px;
+  width: 200px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid darkgrey;
+  border-radius: 8px; }
+
+input.small, button.small {
+  width: 50px; }
+
+input.large, button.large {
+  width: 400px; }
+
+input.button, button.button {
+  background-color: #2b16b5;
+  color: #fff;
+  border-color: #2b16b5;
+  font-weight: 600;
+  width: max-content;
+  cursor: pointer;
+  margin: 0; }
+  input.button[disabled], button.button[disabled] {
+    background-color: #cdcdcd;
+    color: gray;
+    border-color: gray; }
+
+.app {
+  padding: 30px 150px; }
+  .app__excel {
+    display: flex;
+    justify-content: flex-end; }
+  .app__date {
+    margin: 0;
+    padding: 10px;
+    text-align: right; }
+    .app__date span {
+      letter-spacing: 1px;
+      font-weight: 700; }
+  .app__info {
+    display: flex;
+    flex-direction: column; }
+  .app__questions-list {
+    box-sizing: border-box;
+    padding: 0 300px; }
+    .app__questions-list__item {
+      box-sizing: border-box;
+      padding: 20px;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid darkgray;
+      border-radius: 15px;
+      transition: all .3s; }
+      .app__questions-list__item:hover {
+        transform: scale(1.01);
+        box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.3); }
+      .app__questions-list__item p {
+        font-weight: 800; }
+      .app__questions-list__item label {
+        margin-bottom: 10px;
+        cursor: pointer; }

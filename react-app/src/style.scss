@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Comfortaa', cursive;
+}
+
+$color1: #2b16b5;
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: ghostwhite;
+}
+
+input, button {
+  &:not(.radio) {
+    background-color: #fff;
+    margin: 5px;
+    width: 200px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid darkgrey;
+    border-radius: 8px;
+  }
+  &.small {
+    width: 50px;
+  }
+  &.large {
+    width: 400px;
+  }
+  &.button {
+    background-color: $color1;
+    color: #fff;
+    border-color: $color1;
+    font-weight: 600;
+    width: max-content;
+    cursor: pointer;
+    margin: 0;
+    &[disabled] {
+      background-color: #cdcdcd;
+      color: gray;
+      border-color: gray;
+    }
+  }
+}
+
+.app {
+  padding: 30px 150px;
+  &__excel {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__date {
+    margin: 0;
+    padding: 10px;
+    text-align: right;
+    span {
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__questions-list {
+    box-sizing: border-box;
+    padding: 0 300px;
+    &__item {
+      box-sizing: border-box;
+      padding: 20px;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid darkgray;
+      border-radius: 15px;
+      transition: all .3s;
+      &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 5px 15px 5px rgba(0, 0, 0, .3);
+      }
+      p {
+        font-weight: 800;
+      }
+      label {
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

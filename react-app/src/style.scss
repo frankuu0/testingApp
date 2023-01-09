@@ -31,11 +31,15 @@ input, button {
   &.button {
     background-color: $color1;
     color: #fff;
-    border-color: $color1;
+    border: 0;
     font-weight: 600;
     width: max-content;
     cursor: pointer;
     margin: 0;
+    transition: all .2s;
+    &:hover {
+      background-color: lighten($color1, 15%);
+    }
     &[disabled] {
       background-color: #cdcdcd;
       color: gray;
@@ -45,7 +49,7 @@ input, button {
 }
 
 .app {
-  padding: 30px 150px;
+  padding: 30px 150px 40px;
   &__excel {
     display: flex;
     justify-content: flex-end;
@@ -64,8 +68,11 @@ input, button {
     flex-direction: column;
   }
   &__questions-list {
+    position: relative;
+    z-index: 2;
     box-sizing: border-box;
-    padding: 0 300px;
+    padding: 0 300px 30px;
+    background-color: ghostwhite;
     &__item {
       box-sizing: border-box;
       padding: 20px;
@@ -85,7 +92,23 @@ input, button {
       label {
         margin-bottom: 10px;
         cursor: pointer;
+        display: flex;
+        align-items: flex-start;
       }
+    }
+  }
+  &__copyright {
+    text-align: center;
+    letter-spacing: 1px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    z-index: 1;
+    a {
+      color: $color1;
+      text-decoration: none;
     }
   }
 }

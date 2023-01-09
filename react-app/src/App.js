@@ -126,6 +126,7 @@ class App extends Component {
                             <button className="button" onClick={() => this.finishTest()}>Завершить тест</button>
                         </div> : <p>Список вопросов не был получен.</p>
                 }
+                <div className="app__copyright">Разработка: <a href="https://github.com/frankuu0">Арсен Хамдохов</a> и <a href="https://github.com/Valoudya">Владимир Мисостишхов</a></div>
             </div>
         );
     }

@@ -19,7 +19,8 @@
     "build": "react-scripts build && node-sass src -o public",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch": "node-sass src --watch -o public"
+    "watch": "node-sass src --watch -o public",
+    "scss": "node-sass src -o public"
   },
   "eslintConfig": {
     "extends": [
